@@ -1,0 +1,25 @@
+# Install pycocotools
+!pip install pycocotools
+
+# Download and extract COCO dataset
+!mkdir coco_dataset
+%cd coco_dataset
+!mkdir images annotations
+
+# Download train and validation images
+!wget http://images.cocodataset.org/zips/train2017.zip
+!wget http://images.cocodataset.org/zips/val2017.zip
+
+# Extract images
+!unzip train2017.zip -d images
+!unzip val2017.zip -d images
+
+
+# Download annotations
+!wget http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+
+# Extract annotations
+!unzip annotations_trainval2017.zip -d annotations
+
+# Navigate back to the root directory
+%cd /content
